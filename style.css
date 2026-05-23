@@ -241,6 +241,21 @@ a {
   font-size: 0.8125rem; /* 13px */
 }
 
+@media (max-width: 1110px) {
+  .experience-item {
+    flex: 0 1 calc(33.333% - 20px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 610px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
+
 @media (max-width: 375px) {
   h1 {
     font-size: 2rem;
@@ -287,20 +302,5 @@ a {
 
   .footer {
     text-align: center;
-  }
-}
-
-@media (max-width: 610px) {
-  .navbar__list {
-    flex-direction: column;
-    align-items: center;
-    row-gap: 10px;
-  }
-}
-
-@media (max-width: 1110px) {
-  .experience-item {
-    flex: 0 1 calc(33.333% - 20px);
-    justify-content: center;
   }
 }

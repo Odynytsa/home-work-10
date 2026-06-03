@@ -1,120 +1,312 @@
-@use "base/common";
+@import "abstracts/skin";
+@import "abstracts/variables";
 
+
+
+/* CSS Custom properties */
+
+:root {
+  --color-black: #000000;
+  --color-primary: #34547a;
+  --color-secondary: #727272;
+  --color-gray-light: #edeef0;
+  --color-white: #ffffff;
+
+  --font-size: 16px;
+  --font-family: "Roboto", sans-serif;
+  --font-normal: 400;
+  --font-medium: 500;
+
+  --letter-spacing: 0.1em;
+
+  --line-height: 1.64;
+  --line-height-sm: 1.4;
+
+  --container-primary: 1110px;
+  --container-secondary: 540px;
+
+  --gap: 20px;
+  --gap-sm: calc(var(--gap) * 0.5); /* 10px */
+  --gap-lg: calc(var(--gap) * 1.5); /* 30px */
+  --gap-xl: calc(var(--gap) * 2); /* 40px */
+}
+
+/* Typography styles */
 * {
   box-sizing: border-box;
-}
-
-body {
   margin: 0;
-
-  background-color: #ffffff;
-
-  font-family: Arial, Helvetica, sans-serif; // font-family
+  padding: 0;
+  list-style-type: none;
 }
 
-// Тестування медіа-запитів через сучасний синтаксис для перевірки сортування
+html {
+  font-size: $font-size;
+  font-family: var(--font-family);
+  font-weight: var(--font-normal);
+  line-height: var(--line-height);
+}
 
-// Випадкові медіа-запити (не в порядку) для тестування автосортування
-@media (width <= 1200px) {
-  body {
-    padding: 10px;
+h1 {
+  font-size: 3rem;
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-sm);
+}
+h2 {
+  font-size: 2rem;
+  font-weight: var(--font-medium);
+  line-height: var(--line-height-sm);
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+.container {
+  width: min(100% - var(--gap-xl), var(--container-primary));
+  margin-inline: auto;
+}
+.container-sm {
+  width: min(100% - var(--gap-xl), var(--container-secondary));
+  margin-inline: auto;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
 
-    background-color: #f0f0f0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  visibility: hidden; /* Optional for fallback support */
+}
+
+/* Header section */
+.header {
+  background-color: var(--color-gray-light);
+  padding-top: 68px;
+  padding-bottom: 141px;
+}
+.navbar {
+  margin-bottom: 142px;
+}
+.navbar__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 27px;
+  margin-left: -0.75em;
+}
+.navbar__link {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
+  padding: 0.5em 0.75em;
+}
+.navbar__link--active {
+  font-weight: var(--font-medium);
+  color: var(--color-primary);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: var(--container-secondary);
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 43px;
+}
+.hero__description {
+  margin-bottom: 53px;
+  color: var(--color-secondary);
+}
+.hero__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 225px;
+  min-height: 65px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-transform: uppercase;
+  padding: 0.5em;
+  letter-spacing: var(--letter-spacing);
+}
+/* Experience saction */
+.experience {
+  background-color: var(--color-primary);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.experience__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+
+.experience-item__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-white);
+}
+
+.experience-item__value {
+  font-size: 1.5rem;
+  font-weight: var(--font-medium);
+  margin: 0;
+  line-height: 1;
+}
+
+.experience-item__label {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: var(--font-normal);
+  line-height: 1.2;
+}
+
+.experience-item__picture {
+  flex-shrink: 0;
+}
+
+.experience-item__image {
+  display: block;
+  width: auto;
+  height: 50px;
+}
+
+/* About and Process sections */
+.section {
+  padding-top: 110px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.section__title {
+  margin-bottom: 36px;
+}
+
+.section__description {
+  color: var(--color-secondary);
+  line-height: var(--line-height);
+}
+
+/* About section */
+.about {
+  background-color: var(--color-white);
+}
+
+/* Process section */
+.process {
+  background-color: var(--color-gray-light);
+}
+
+/* Video section */
+.video {
+  background-color: var(--color-gray-light);
+  padding-bottom: 100px;
+  margin-top: calc(var(--gap-xl) * -1); /* -40px */
+  overflow: hidden;
+}
+.video__iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 0;
+}
+
+/* Footer section */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer__title {
+  font-size: 1.3125rem; /* 21px */
+  font-weight: var(--font-medium);
+  margin-bottom: 3px;
+}
+.footer__description {
+  font-size: 0.8125rem; /* 13px */
+}
+
+@media (max-width: 1110px) {
+  .experience-item {
+    flex: 0 1 calc(33.333% - 20px);
+    justify-content: center;
   }
 }
 
-@media (width >= 320px) {
-  body {
-    font-size: 14px;
-    line-height: 1.4;
+@media (max-width: 610px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
   }
 }
 
-@media (width <= 768px) {
-  body {
-    padding: 15px;
-
-    background-color: #e0e0e0;
+@media (max-width: 375px) {
+  h1 {
+    font-size: 2rem;
   }
-}
 
-@media (width >= 768px) {
-  body {
-    font-size: 16px;
-    line-height: 1.5;
+  h2 {
+    font-size: 1.5rem;
   }
-}
 
-// Діапазони через сучасний синтаксис
-@media (768px <= width < 1024px) {
-  body {
-    padding: 20px;
-
-    background-color: #d0d0d0;
-
-    font-weight: 500;
+  .header {
+    padding-top: 40px;
+    padding-bottom: 70px;
   }
-}
 
-@media (480px < width <= 767px) {
-  body {
-    padding: 12px;
-
-    background-color: #c0c0c0;
-
-    font-weight: 400;
+  .navbar {
+    margin-bottom: 60px;
   }
-}
 
-@media (width <= 480px) {
-  body {
-    padding: 8px;
-
-    background-color: #b0b0b0;
-
-    font-size: 12px;
+  .hero {
+    margin: auto;
+    align-items: center;
+    text-align: center;
   }
-}
 
-@media (width >= 1024px) {
-  body {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    font-size: 18px;
-    line-height: 1.6;
+  .hero__button {
+    width: 100%;
+    max-width: 250px;
   }
-}
 
-@media (width >= 1200px) {
-  body {
-    padding: 40px;
-
-    font-size: 20px;
-    line-height: 1.8;
+  .section {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
-}
 
-// Додатковий діапазон для перевірки
-@media (320px <= width <= 479px) {
-  body {
-    padding: 5px;
-
-    background-color: #a0a0a0;
-
-    font-size: 11px;
+  .experience {
+    padding-top: 70px;
+    padding-bottom: 70px;
   }
-}
 
-// Тестування з операторами > та <
-@media (width > 600px) {
-  body {
-    letter-spacing: 0.5px;
+  .experience__container {
+    flex-direction: column;
+    gap: 70px;
   }
-}
 
-@media (width < 400px) {
-  body {
+  .footer {
     text-align: center;
   }
 }

@@ -25,6 +25,6 @@ $container-primary: 1110px;
 $container-secondary: 540px;
 
 $gap: 20px;
-$gap-sm: calc(var($gap) * 0.5); /* 10px */
-$gap-lg: calc(var($gap) * 1.5); /* 30px */
-$gap-xl: calc(var($gap) * 2); /* 40px */
+$gap-sm: $gap * 0.5; // 10px
+$gap-lg: $gap * 1.5; // 30px
+$gap-xl: $gap * 2;   // 40px

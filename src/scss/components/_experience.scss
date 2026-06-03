@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+/* Experience saction */
+.experience {
+  background-color: $color-primary;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.experience__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.experience-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: row-reverse;
+}
+
+.experience-item__description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: $color-white;
+}
+
+.experience-item__value {
+  font-size: 1.5rem;
+  font-weight: $font-medium;
+  margin: 0;
+  line-height: 1;
+}
+
+.experience-item__label {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: $font-normal;
+  line-height: 1.2;
+}
+
+.experience-item__picture {
+  flex-shrink: 0;
+}
+
+.experience-item__image {
+  display: block;
+  width: auto;
+  height: 50px;
+}

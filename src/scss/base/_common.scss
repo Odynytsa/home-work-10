@@ -1,15 +1,14 @@
 @use "../abstracts/" as *;
 
-
 .container {
   width: min(100% - #{$gap-xl}, #{$container-primary});
   margin-inline: auto;
+
+  &--sm {
+    width: min(100% - #{$gap-xl}, #{$container-secondary});
+  }
 }
 
-.container-sm {
-  width: min(100% - #{$gap-xl}, #{$container-secondary});
-  margin-inline: auto;
-}
 .visually-hidden {
   position: absolute;
   width: 1px;

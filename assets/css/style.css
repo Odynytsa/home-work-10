@@ -1,26 +1,155 @@
-.container{
-  width:min(100% - 40px, 1110px);
-  margin-inline:auto;
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html{
+  line-height:1.15;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0;
+}
+main{
+  display:block;
+}
+h1{
+  font-size:2em;
+  margin:0.67em 0;
+}
+hr{
+  -webkit-box-sizing:content-box;
+          box-sizing:content-box;
+  height:0;
+  overflow:visible;
+}
+pre{
+  font-family:monospace, monospace;
+  font-size:1em;
+}
+a{
+  background-color:transparent;
+}
+abbr[title]{
+  border-bottom:none;
+  text-decoration:underline;
+  -webkit-text-decoration:underline dotted;
+          text-decoration:underline dotted;
+}
+b,
+strong{
+  font-weight:bolder;
+}
+code,
+kbd,
+samp{
+  font-family:monospace, monospace;
+  font-size:1em;
+}
+small{
+  font-size:80%;
+}
+sub,
+sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+  vertical-align:baseline;
 }
 
-.container-sm{
-  width:min(100% - 40px, 540px);
-  margin-inline:auto;
+sub{
+  bottom:-0.25em;
 }
 
-.visually-hidden{
-  position:absolute;
-  width:1px;
-  height:1px;
-  margin:-1px;
-  border:0;
+sup{
+  top:-0.5em;
+}
+img{
+  border-style:none;
+}
+button,
+input,
+optgroup,
+select,
+textarea{
+  font-family:inherit;
+  font-size:100%;
+  line-height:1.15;
+  margin:0;
+}
+button,
+input{
+  overflow:visible;
+}
+button,
+select{
+  text-transform:none;
+}
+button,
+[type=button],
+[type=reset],
+[type=submit]{
+  -webkit-appearance:button;
+}
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner{
+  border-style:none;
   padding:0;
-  white-space:nowrap;
-  -webkit-clip-path:inset(100%);
-          clip-path:inset(100%);
-  clip:rect(0 0 0 0);
-  overflow:hidden;
-  visibility:hidden;
+}
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring{
+  outline:1px dotted ButtonText;
+}
+fieldset{
+  padding:0.35em 0.75em 0.625em;
+}
+legend{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  color:inherit;
+  display:table;
+  max-width:100%;
+  padding:0;
+  white-space:normal;
+}
+progress{
+  vertical-align:baseline;
+}
+textarea{
+  overflow:auto;
+}
+[type=checkbox],
+[type=radio]{
+  -webkit-box-sizing:border-box;
+          box-sizing:border-box;
+  padding:0;
+}
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button{
+  height:auto;
+}
+[type=search]{
+  -webkit-appearance:textfield;
+  outline-offset:-2px;
+}
+[type=search]::-webkit-search-decoration{
+  -webkit-appearance:none;
+}
+::-webkit-file-upload-button{
+  -webkit-appearance:button;
+  font:inherit;
+}
+details{
+  display:block;
+}
+summary{
+  display:list-item;
+}
+template{
+  display:none;
+}
+[hidden]{
+  display:none;
 }
 *{
   -webkit-box-sizing:border-box;
@@ -53,6 +182,29 @@ a{
   text-decoration:none;
   color:#000000;
 }
+
+.container{
+  width:min(100% - 40px, 1110px);
+  margin-inline:auto;
+}
+.container--sm{
+  width:min(100% - 40px, 540px);
+}
+
+.visually-hidden{
+  position:absolute;
+  width:1px;
+  height:1px;
+  margin:-1px;
+  border:0;
+  padding:0;
+  white-space:nowrap;
+  -webkit-clip-path:inset(100%);
+          clip-path:inset(100%);
+  clip:rect(0 0 0 0);
+  overflow:hidden;
+  visibility:hidden;
+}
 .header{
   background-color:#edeef0;
   padding-top:68px;
@@ -61,7 +213,6 @@ a{
 .navbar{
   margin-bottom:142px;
 }
-
 .navbar__list{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -73,7 +224,6 @@ a{
           column-gap:27px;
   margin-left:-0.75em;
 }
-
 .navbar__link{
   position:relative;
   display:block;
@@ -81,7 +231,6 @@ a{
   letter-spacing:0.1em;
   padding:0.5em 0.75em;
 }
-
 .navbar__link--active{
   font-weight:500;
   color:#34547a;
@@ -99,17 +248,14 @@ a{
           align-items:flex-start;
   max-width:540px;
 }
-
 .hero__title{
   margin-top:0;
   margin-bottom:43px;
 }
-
 .hero__description{
   margin-bottom:53px;
   color:#727272;
 }
-
 .hero__button{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -128,29 +274,24 @@ a{
   padding:0.5em;
   letter-spacing:0.1em;
 }
-.section{
+.about{
+  background-color:#ffffff;
   padding-top:110px;
   padding-bottom:90px;
   text-align:center;
 }
-
-.section__title{
+.about__title{
   margin-bottom:36px;
 }
-
-.section__description{
+.about__description{
   color:#727272;
   line-height:1.64;
-}
-.about{
-  background-color:#ffffff;
 }
 .experience{
   background-color:#34547a;
   padding-top:100px;
   padding-bottom:100px;
 }
-
 .experience__container{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -165,7 +306,6 @@ a{
   -ms-flex-wrap:wrap;
       flex-wrap:wrap;
 }
-
 .experience-item{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -179,7 +319,6 @@ a{
       -ms-flex-direction:row-reverse;
           flex-direction:row-reverse;
 }
-
 .experience-item__description{
   display:-webkit-box;
   display:-ms-flexbox;
@@ -193,26 +332,22 @@ a{
           align-items:flex-start;
   color:#ffffff;
 }
-
 .experience-item__value{
   font-size:1.5rem;
   font-weight:500;
   margin:0;
   line-height:1;
 }
-
 .experience-item__label{
   font-size:1rem;
   margin:0;
   font-weight:400;
   line-height:1.2;
 }
-
 .experience-item__picture{
   -ms-flex-negative:0;
       flex-shrink:0;
 }
-
 .experience-item__image{
   display:block;
   width:auto;
@@ -220,6 +355,16 @@ a{
 }
 .process{
   background-color:#edeef0;
+  padding-top:110px;
+  padding-bottom:90px;
+  text-align:center;
+}
+.process__title{
+  margin-bottom:36px;
+}
+.process__description{
+  color:#727272;
+  line-height:1.64;
 }
 .video{
   background-color:#edeef0;
@@ -227,7 +372,6 @@ a{
   margin-top:calc(40px * -1);
   overflow:hidden;
 }
-
 .video__iframe{
   display:block;
   width:100%;
@@ -241,17 +385,14 @@ a{
   padding-top:50px;
   padding-bottom:50px;
 }
-
 .footer__title{
   font-size:1.3125rem;
   font-weight:500;
   margin-bottom:3px;
 }
-
 .footer__description{
   font-size:0.8125rem;
 }
-
 @media (max-width: 1110px){
   .experience-item{
     -webkit-box-flex:0;
@@ -262,7 +403,6 @@ a{
             justify-content:center;
   }
 }
-
 @media (max-width: 610px){
   .navbar__list{
     -webkit-box-orient:vertical;
@@ -275,7 +415,6 @@ a{
     row-gap:10px;
   }
 }
-
 @media (max-width: 375px){
   h1{
     font-size:2rem;

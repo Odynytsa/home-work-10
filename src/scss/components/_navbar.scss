@@ -3,21 +3,22 @@
 /* Navbar section */
 .navbar {
   margin-bottom: 142px;
-}
-.navbar__list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 27px;
-  margin-left: -0.75em;
-}
-.navbar__link {
-  position: relative;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing;
-  padding: 0.5em 0.75em;
-}
-.navbar__link--active {
-  font-weight: $font-medium;
-  color: $color-primary;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 27px;
+    margin-left: -0.75em;
+  }
+  &__link {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: $letter-spacing;
+    padding: 0.5em 0.75em;
+  }
+  &__link--active {
+    font-weight: $font-medium;
+    color: $color-primary;
+  }
 }

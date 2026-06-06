@@ -1,19 +1,9 @@
-
+/* import external styles*/
+@use "../../node_modules/normalize.css/normalize.css";
+/* import internal styles*/
 @use "base";
 
 @use "components";
-
-@use "layout";
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 1110px) {
   .experience-item {

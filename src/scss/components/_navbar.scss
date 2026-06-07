@@ -22,3 +22,17 @@
     color: $color-primary;
   }
 }
+
+@media (max-width: $sm) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: $us) {
+  .navbar {
+    margin-bottom: 60px;
+  }
+}

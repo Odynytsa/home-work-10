@@ -53,3 +53,22 @@
     height: 50px;
   }
 }
+
+@media (max-width: $xl) {
+  .experience-item {
+    flex: 0 1 calc(33.333% - 20px);
+    justify-content: center;
+  }
+}
+
+@media (max-width: $us) {
+  .experience {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .experience__container {
+    flex-direction: column;
+    gap: 70px;
+  }
+}

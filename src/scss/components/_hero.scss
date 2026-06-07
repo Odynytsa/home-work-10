@@ -28,3 +28,16 @@
     letter-spacing: $letter-spacing;
   }
 }
+
+@media (max-width: $us) {
+  .hero {
+    margin: auto;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__button {
+    width: 100%;
+    max-width: 250px;
+  }
+}

@@ -17,3 +17,9 @@
     font-size: 0.8125rem; /* 13px */
   }
 }
+
+@media (max-width: $us) {
+  .footer {
+    text-align: center;
+  }
+}

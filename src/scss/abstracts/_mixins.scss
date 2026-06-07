@@ -16,3 +16,10 @@
     line-height: $line-height;
   }
 }
+
+@media (max-width: $us) {
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

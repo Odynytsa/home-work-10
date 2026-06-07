@@ -7,6 +7,10 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
+  @media (max-width: $us) {
+    text-align: center;
+  }
+
   &__title {
     font-size: 1.3125rem; /* 21px */
     font-weight: $font-medium;
@@ -15,11 +19,5 @@
 
   &__description {
     font-size: 0.8125rem; /* 13px */
-  }
-}
-
-@media (max-width: $us) {
-  .footer {
-    text-align: center;
   }
 }

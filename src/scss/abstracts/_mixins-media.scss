@@ -1,0 +1,53 @@
+@use "variables" as *;
+
+/* Media Queries Mixins
+ * Responsive design mixins for different breakpoints
+ */
+
+@mixin media-us {
+  @media (max-width: $us) {
+    @content;
+  }
+}
+
+@mixin media-vs {
+  @media (max-width: $vs) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @media (max-width: $xs) {
+    @content;
+  }
+}
+
+@mixin media-sm {
+  @media (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin media-md {
+  @media (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin media-ul {
+  @media (max-width: $ul) {
+    @content;
+  }
+}

@@ -7,7 +7,7 @@
   align-items: flex-start;
   max-width: $container-secondary;
 
-  @media (max-width: $sm) {
+  @include media-sm {
     margin: auto;
     align-items: center;
     text-align: center;
@@ -34,7 +34,7 @@
     letter-spacing: $letter-spacing;
   }
 
-  @media (max-width: $us) {
+  @include media-us {
     width: 100%;
     max-width: 250px;
   }

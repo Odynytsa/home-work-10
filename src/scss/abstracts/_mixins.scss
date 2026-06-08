@@ -1,11 +1,17 @@
 @use "skin" as *;
 @use "variables" as *;
+@use "mixins-media" as *;
 
 /* About and Process sections */
 @mixin section() {
   padding-top: 110px;
   padding-bottom: 90px;
   text-align: center;
+
+  @include media-us {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 
   &__title {
     margin-bottom: 36px;
@@ -14,12 +20,5 @@
   &__description {
     color: $color-secondary;
     line-height: $line-height;
-  }
-}
-
-@media (max-width: $us) {
-  section {
-    padding-top: 70px;
-    padding-bottom: 70px;
   }
 }

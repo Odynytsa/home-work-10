@@ -20,7 +20,7 @@ h1 {
   font-weight: $font-medium;
   line-height: $line-height-sm;
 
-  @media (max-width: $us) {
+  @include media-us {
     font-size: 2rem;
   }
 }
@@ -29,7 +29,7 @@ h2 {
   font-weight: $font-medium;
   line-height: $line-height-sm;
 
-  @media (max-width: $us) {
+  @include media-us {
     font-size: 1.5rem;
   }
 }

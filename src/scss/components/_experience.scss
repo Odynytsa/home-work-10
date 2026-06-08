@@ -6,7 +6,7 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
-  @media (max-width: $us) {
+  @include media-us {
     padding-top: 70px;
     padding-bottom: 70px;
   }
@@ -18,7 +18,7 @@
     gap: 60px;
     flex-wrap: wrap;
 
-    @media (max-width: $us) {
+    @include media-us {
       flex-direction: column;
       gap: 70px;
     }
@@ -32,7 +32,7 @@
   gap: 20px;
   flex-direction: row-reverse;
 
-  @media (max-width: $xl) {
+  @include media-xl {
     flex: 0 1 calc(33.333% - 20px);
     justify-content: center;
   }
